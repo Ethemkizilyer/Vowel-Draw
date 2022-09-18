@@ -62,21 +62,18 @@ input.addEventListener("input", () => {
       p.innerText = "Sesli Harf Sayısı: " + counter;
       ert.innerText = "Sessiz Harf Sayısı: " + coun;
       qwe.innerText = "Toplam Harf Sayısı: " + (coun + counter);
-      counter = 0;
-      coun = 0;
     });
   } else {
-    
-    //  p.innerText = "Sesli Harf Sayısı: " + counter;
-    //  ert.innerText = "Sessiz Harf Sayısı: " + coun;
-    //  qwe.innerText = "Toplam Harf Sayısı: " + (coun + counter);
+     if (asd.includes(input.value)) {
+       counter++;
+     } else if (sessiz.includes(input.value)) {
+       coun++;
+     }
+     p.innerText = "Sesli Harf Sayısı: " + counter;
+      ert.innerText = "Sessiz Harf Sayısı: " + coun;
+      qwe.innerText = "Toplam Harf Sayısı: " + (coun + counter);
      console.log(input.value);
     input.addEventListener("keydown", (event) => {
-       if (asd.includes(input.value)) {
-         counter++;
-       } else if (sessiz.includes(input.value)) {
-         coun++;
-       }
       // console.log(event.code);
       // console.log(input.value);
       if (event.code == "Space") {
@@ -144,9 +141,7 @@ input.addEventListener("input", () => {
       p.innerText = "Sesli Harf Sayısı: " + counter;
       ert.innerText = "Sessiz Harf Sayısı: " + coun;
       qwe.innerText = "Toplam Harf Sayısı: " + (coun + counter);
-      
     });
-     
   }
 });
 // *************************************************************
