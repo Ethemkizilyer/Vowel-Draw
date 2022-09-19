@@ -39,7 +39,7 @@ let coun = 0;
       input.value.split("").forEach((e) => {
         if (asd.includes(e)) {
           counter++;
-        } else if (sessiz.includes(e)) {
+        } else if (sessiz.includes(e.toLowerCase())) {
           coun++;
         } 
       });
@@ -53,7 +53,7 @@ let coun = 0;
   } else {
      if (asd.includes(input.value)) {
        counter++;
-     } else if (sessiz.includes(input.value)) {
+     } else if (sessiz.includes(input.value.toLowerCase())) {
        coun++;
      }
     
@@ -80,7 +80,7 @@ let coun = 0;
           --counter;
         } else if (
           sessiz.includes(
-            input.value.split("")[input.value.split("").length - 1]
+            input.value.toLowerCase().split("")[input.value.split("").length - 1]
           )
         ) {
           --coun;
@@ -88,7 +88,7 @@ let coun = 0;
         input.value.split("").forEach((e) => {
           if (asd.includes(e)) {
             counter++;
-          } else if (sessiz.includes(e)) {
+          } else if (sessiz.includes(e.toLowerCase())) {
             coun++;
           } else if (e.code == "Space") {
             kelime++;
